@@ -3,6 +3,7 @@
 
 " so that we can put pathogen.vim in a submodule
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 filetype plugin indent on
 
@@ -55,7 +56,6 @@ set wildignore+=*.a,*.o
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=*.git,*~,*.swp,*.tmp
 
-execute pathogen#infect()
 "PLUGIN: Synstastic 
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_open = 1
@@ -64,4 +64,3 @@ let g:syntastic_error_symbol = '!>'
 let g:syntastic_style_error_symbol = 'S>'
 let g:syntastic_style_warning_symbol = 's>'
 let g:syntastic_always_populate_loc_list = 1
-
