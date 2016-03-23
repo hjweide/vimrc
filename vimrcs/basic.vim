@@ -9,6 +9,7 @@ filetype plugin indent on
 
 " highlight cuda files as cpp
 au BufNewFile,BufRead *.cu set ft=cpp
+au BufNewFile,BufRead *.html set ft=javascript
 
 set autochdir
 set tabstop=2 " number of visual spaces per tab
