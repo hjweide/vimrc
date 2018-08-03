@@ -15,7 +15,7 @@ setlocal formatoptions=croql
 let g:syntastic_python_checkers=['flake8'] " ignores lines containng # NOQA
 " SCRIPTING VIM IN PYTHON 
 " http://orestis.gr/blog/2008/08/10/scripting-vim-with-python/
-python << endpython
+py3 << EOF
 import vim
 flake8_errors = [
     'E201', # whitespace after '('
@@ -32,4 +32,4 @@ flake8_errors = [
 ] 
 flake8_ignore = '--ignore=' + ','.join(flake8_errors)
 vim.command('let g:syntastic_python_flake8_args = "%s"' % flake8_ignore)
-endpython
+EOF
